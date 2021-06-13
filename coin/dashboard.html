@@ -1,0 +1,85 @@
+{%  extends 'coin/main.html' %}
+
+{% block content %}
+
+<br>
+<div class="row">
+	<div class="col-md-5">
+		<h5>USERS:</h5>
+		<hr>
+		<div class="card card-body">
+			
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Name</th>
+					<th>Username</th>
+				</tr>
+
+
+				{% for user in users %}
+					<tr>
+						<td><a class="btn bnt-sm btn-info"href="{% url 'user' user.id %}">View</a></td>	
+						<td>{{user.name}}</td>
+						<td>{{user.username}}</td>
+					</tr>
+
+				{% endfor%}
+
+			</table>
+		</div>
+	</div>
+
+		<div class="col-md-7">
+		<h5>STOCKS :</h5>
+		<hr>
+		<div class="card card-body">
+			
+			<table class="table table-sm">
+				<tr>
+					<th>Name</th>
+					<th>Code</th>
+					<th>Price</th>
+					<th>Date Orderd</th>
+					
+				</tr>
+
+				{% for stock in stocks %}
+					<tr>
+						<td>{{stock.name}}</td>
+						<td>{{stock.code}}</td>
+						<td>{{stock.price}}</td>
+						<td>{{stock.date_created}}</td>
+						
+					</tr>
+
+				{% endfor%}
+
+		
+			</table>
+		</div>
+	</div>
+
+</div>
+
+
+{% include 'coin/status.html' %}
+
+
+
+
+
+<center><font face="verdana" color="red" size="5" >Just fill out the membership form to start earning now.</font><center>
+	<br>
+
+
+
+	
+	
+	<td><a class="btn bnt-sm btn-info" href ="{% url 'register' %}">Sign Up Form</a></td>
+
+	
+
+
+
+{% endblock %}

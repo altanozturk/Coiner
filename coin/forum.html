@@ -1,0 +1,66 @@
+{%  extends 'coin/main.html' %}
+
+{% block content %}
+
+
+	<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Forum:</h5>
+			<hr>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="">Add Forum</a>
+			<a class="btn btn-outline-danger  btn-sm btn-block" href="">Delete Forum</a>
+
+		</div>
+		
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Information</h5>
+			<hr>
+			<p>Title: {{forum.title}}</p>
+			
+		</div>
+	</div>
+
+	</div>
+
+
+<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Employee</th>
+					<th>User</th>
+					
+					
+				</tr>
+
+				{% for forum in forums %}
+
+				<tr>
+					<td>{{forum.employee.name}</td>
+					<td>{{forum.user.name}}</td>
+					
+					<td><a class = "btn btn-sm btn-info" href="{% url 'update_buy' buy.id %}">Update</a></td>
+					<td><a class = "btn btn-sm btn-danger" href="{% url 'delete_buy' buy.id %}">Delete</a></td>
+
+				</tr>
+
+
+				{% endfor %}
+
+
+
+			</table>
+		</div>
+	</div>
+</div>
+
+	{% endblock content %}

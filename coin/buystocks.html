@@ -1,0 +1,50 @@
+{%  extends 'coin/main.html' %}
+
+{% block content %}
+{% load static %}
+
+
+
+	
+
+  <b>
+  <font face="Verdana" size="5" color="black">Buying Stock</font><br />  </b>
+  <div align='center'>
+  <select class="form-select" aria-label="Default select example">
+  <option selected>Microsoft</option>
+  <option value="1">Microsoft</option>
+  <option value="2">Apple</option>
+  <option value="3">Tesla</option>
+  <option value="1">Google</option>
+  <option value="1">Samsung</option>
+  <option value="1">Amazon</option>
+</select>
+<font face="verdana" color="black" size="5">Stock Price : $220.15</font>
+<div align='center'>
+  <img src="{% static 'images/micro2.png' %}">
+  <br>
+  <div align="left">
+  <font face="verdana" color="black" size="4">Welcome Altan ,<br> 
+Your account balance : $15.000 <br>
+The number of stocks you have : 0</font>
+  <br>
+  <br>
+  <b>
+  <font face="verdana" color="black" size="5">Enter requested price</font>
+  <font face="verdana" color="black" size="5">$0</font>
+  <input type="range" class="form-range" min="0" max="100" id="customRange2">
+  <font face="verdana" color="black" size="5">$10.000</font>
+  <div align="center">
+  <td><a class="btn bnt-sm btn-info" href ="{% url 'buying_stock' %}">BUY</a></td>
+  <td><a class="btn bnt-sm btn-danger" href="">SELL</a></td>
+  <br>
+
+ 
+
+	{% endblock %}
+
+	</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>

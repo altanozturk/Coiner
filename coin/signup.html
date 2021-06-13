@@ -1,0 +1,65 @@
+{%  extends 'coin/main.html' %}
+
+{% block content %}
+
+<div align="center">
+  <b>
+  <font face="verdana" color="black" size="7">Coiner</font></b>
+</div>
+<br>
+<div align="center">
+<div class="container">
+    <label for="uname"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="uname" required>
+    <br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <br>
+
+    <label for="usname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="usname" required>
+    <br>
+
+    <label for="bir"><b>Birth</b></label>
+    <input type="text" placeholder="Enter Birth" name="bir" required>
+    <br>
+    <label for="addr"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="addr" required>
+    <br>
+
+    <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    I have read and accept the contract
+  </label>
+</div>
+
+    
+    <td><a class="btn bnt-sm btn-info" href ="{% url 'home' %}">Sign Up</a></td>
+     
+    <br>
+    <br>
+    </div>
+
+    <td><a class="btn bnt-sm btn-danger" href ="{% url 'home' %}">Cancel</a></td>
+    <br>
+    
+  </div>
+
+</form>
+
+</div>
+
+
+
+
+
+  {% endblock %}
+
+
+  </body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
